@@ -22,8 +22,17 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.header-content {
+/*.header-content {
     position: relative;
+    
+}*/
+.header-content {
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding-bottom:0px;
 }
 
 .overlay {
@@ -34,31 +43,42 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
     color: white;
+    font-size: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+h1 {
+    margin-top:auto; /* Отодвигаем заголовок вверх */
+    text-align:center; /* Центрируем заголовок */
+    padding-bottom:200px; /* Добавляем отступ снизу для увеличения расстояния до навигации */
+}
+
 
 nav ul {
-   list-style-type: none;
-   padding: 0;
-   display: flex;
-   gap: 15px; /* Расстояние между элементами */
-}
+    list-style-type:none;
+    padding:0;
+    margin-top:auto;
+    display:flex;
+    gap:105px; /* Расстояние между элементами */
+ }
 
 nav ul li {
    display: inline-block;
 }
 
 nav ul li a {
-   color: white; /* Цвет ссылок */
+   color:white; /* Цвет ссылок */
    text-decoration: none; /* Убираем подчеркивание */
    font-weight: bold; /* Жирный текст */
+   text-shadow: -1px -1px -3px rgba(0,0,0,.7);
+
 }
 
 nav ul li a:hover {
    text-decoration: underline; /* Подчеркивание при наведении */
+   box-shadow:-0px -4px -8px rgba(0,0,0,.3);
 }
 
 section {
