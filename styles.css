@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    height: 400px; /* Высота хедера */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.header-content {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+   list-style-type: none;
+   padding: 0;
+   display: flex;
+   gap: 15px; /* Расстояние между элементами */
+}
+
+nav ul li {
+   display: inline-block;
+}
+
+nav ul li a {
+   color: white; /* Цвет ссылок */
+   text-decoration: none; /* Убираем подчеркивание */
+   font-weight: bold; /* Жирный текст */
+}
+
+nav ul li a:hover {
+   text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+section {
+   padding: 20px;
+}
+
+.responsive-img {
+   width: 100%;
+   max-width: 600px; /* Максимальная ширина изображения */
+   height: auto; /* Автоматическая высота для сохранения пропорций */
+   display:block; /* Чтобы убрать отступы внизу изображения */
+   margin:auto; /* Центрирование изображений */
+}
+
+#about, #games, #community {
+   transition-transform:.5s ease-in-out
+}
+#about:hover,#games:hover,#community:hover{transform-scale(1.05)}
+
+.game {
+   margin-bottom-20px
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width-768px){
+ nav ul{
+     flex-direction-column
+ }
+ section{
+     padding-left-10px;padding-right-10px
+ }
+}
